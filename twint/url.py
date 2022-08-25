@@ -67,7 +67,7 @@ async def MobileProfile(username, init):
 async def Search(config, init):
     logme.debug(__name__ + ':Search')
     url = base
-    tweet_count = conifg.Limit
+    tweet_count = config.Limit
     q = ""
     params = [
         # ('include_blocking', '1'),
@@ -168,7 +168,7 @@ async def Search(config, init):
 def SearchProfile(config, init=None):
     logme.debug(__name__ + ':SearchProfile')
     _url = 'https://api.twitter.com/2/timeline/profile/{user_id}.json'.format(user_id=config.User_id)
-    tweet_count = conifg.Limit
+    tweet_count = config.Limit
     params = [
         # some of the fields are not required, need to test which ones aren't required
         ('include_profile_interstitial_type', '1'),
