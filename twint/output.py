@@ -48,8 +48,6 @@ def datecheck(datetimestamp, config):
 
         d = _formatDateTime(datetimestamp)
         s = _formatDateTime(config.Since)
-        print(datetimestamp)
-        print('tweetTime:{},sinceTime:{}'.format(d, s))
 
         if d < s:
             return False
