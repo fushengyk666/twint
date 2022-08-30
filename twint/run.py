@@ -94,10 +94,8 @@ class Twint:
                         self.feed, self.init = feed.parse_tweets(self.config, response)
                     except NoMoreTweetsException as e:
                         logme.debug(__name__ + ':Twint:Feed:' + str(e))
-                        logme.debug('[!] ' + str(e) + ' Scraping will stop now.')
-                        logme.debug('found {} deleted tweets in this search.'.format(len(self.config.deleted)))
-                        # print('[!] ' + str(e) + ' Scraping will stop now.')
-                        # print('found {} deleted tweets in this search.'.format(len(self.config.deleted)))
+                        print('[!] ' + str(e) + ' Scraping will stop now.')
+                        print('found {} deleted tweets in this search.'.format(len(self.config.deleted)))
                         break
                 break
             except TimeoutError as e:
